@@ -1,0 +1,44 @@
+blur:
+  blur_limit:
+  - 3
+  - 5
+  p: 0.0
+cfg_filepath: configs/0927_cfg_full_im128.yaml
+cutout:
+  p: 0.0
+  scale_max: 0.99
+  scale_min: 0.75
+debug: false
+device: cuda:0
+downscale:
+  fill_value: 0
+  max_h_size: 20
+  max_w_size: 20
+  num_holes: 5
+  p: 0.0
+ema_decay: 0.999
+epoch: 1
+l5kit_data_folder: ../../input/lyft-motion-prediction-autonomous-vehicles
+load_predictor_filepath: ''
+min_frame_future: 10
+min_frame_history: 0
+model_kwargs:
+  hdim: 4096
+  use_bn: false
+model_name: se_resnext50_32x4d
+n_valid_data: 10000
+out_dir: results/20201105_cosine_seresnext50
+pred_mode: multi
+resume_if_possible: true
+scene_sampler: false
+scene_sampler_min_state_index: 0
+scheduler_kwargs:
+  T_max: 2100000
+scheduler_trigger:
+- 1
+- iteration
+scheduler_type: CosineAnnealingLR
+snapshot_freq: 5000
+target_scale_filepath: ''
+validation_chopped: true
+validation_freq: 20000

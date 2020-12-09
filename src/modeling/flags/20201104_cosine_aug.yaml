@@ -1,0 +1,26 @@
+cfg_filepath: configs/0905_cfg_full.yaml
+debug: false
+device: cuda:0
+ema_decay: 0.999
+epoch: 1
+l5kit_data_folder: ../../input/lyft-motion-prediction-autonomous-vehicles
+load_predictor_filepath: ''
+min_frame_future: 10
+min_frame_history: 0
+model_kwargs: {}
+model_name: resnet18
+n_valid_data: 10000
+out_dir: results/20201104_cosine_aug
+pred_mode: multi
+resume_if_possible: true
+scene_sampler: false
+scene_sampler_min_state_index: 0
+scheduler_kwargs:
+  T_max: 2100000
+scheduler_trigger:
+- 1
+- iteration
+scheduler_type: CosineAnnealingLR
+snapshot_freq: 5000
+validation_chopped: true
+validation_freq: 20000

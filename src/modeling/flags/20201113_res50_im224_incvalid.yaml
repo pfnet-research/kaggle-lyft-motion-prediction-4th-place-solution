@@ -1,0 +1,53 @@
+augmentation_in_validation: false
+blur:
+  blur_limit:
+  - 3
+  - 5
+  p: 0.0
+cfg_filepath: configs/0905_cfg_full.yaml
+crossdrop:
+  fill_value: 0
+  max_h_cut: 0.3
+  max_w_cut: 0.3
+  p: 0.0
+cutout:
+  p: 0.0
+  scale_max: 0.99
+  scale_min: 0.75
+debug: false
+device: cuda:0
+downscale:
+  fill_value: 0
+  max_h_size: 20
+  max_w_size: 20
+  num_holes: 5
+  p: 0.0
+ema_decay: 0.999
+epoch: 1
+feat_mode: none
+include_valid: 'true'
+l5kit_data_folder: ../../input/lyft-motion-prediction-autonomous-vehicles
+load_predictor_filepath: ''
+min_frame_future: 10
+min_frame_history: 0
+model_kwargs:
+  hdim: 4096
+  use_bn: false
+model_name: resnet50
+n_valid_data: 10000
+out_dir: results/20201113_res50_im224_incvalid
+override_sample_function_name: ''
+pred_mode: multi
+resume_if_possible: true
+scene_sampler: false
+scene_sampler_min_state_index: 0
+scheduler_kwargs:
+  T_max: 2301400
+scheduler_trigger:
+- 1
+- iteration
+scheduler_type: CosineAnnealingLR
+snapshot_freq: 5000
+target_scale_filepath: ''
+validation_chopped: true
+validation_freq: 20000

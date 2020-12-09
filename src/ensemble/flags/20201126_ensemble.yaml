@@ -1,0 +1,15 @@
+outdir: "src/ensemble/results/20201126_ensemble_1_submission.csv"
+weight: [1, 1, 1, 1, 1, 1, 1, 1, 1]
+sigma: 0.001
+N_sample: 3000
+covariance_type: "spherical"
+file_list:
+- src/modeling/results/20201110_cosine_aug_2_min_history_0/prediction_ema/submission.csv
+- src/modeling/results/20201104_vanilla_cosine_min_history_0/prediction_ema/submission.csv
+- src/modeling/results/20201104_cosine_aug/prediction_ema/submission.csv
+- src/modeling/results/20201105_cosine_seresnext50/prediction_ema/submission.csv
+- src/modeling/results/20201113_res50_im224_incvalid/prediction_ema/submission.csv
+- src/modeling/results/20201112_snapshot_ensemble_resnet18/4th_cycle/prediction/submission.csv
+- src/modeling/results/20201115_cosine_seresnext50_im224_aug/prediction_ema/submission.csv
+- src/modeling/results/20201115_cosine_seresnext50_im224/prediction_ema/submission.csv
+- src/modeling/results/20201118_cosine_seresnext50_im224_aug_val/prediction_ema/submission.csv
